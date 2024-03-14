@@ -1,3 +1,13 @@
+# Install the here package if not already installed
+#if (!requireNamespace("here", quietly = TRUE)) {
+#	install.packages("here")
+#}
+
+# Load the here package
+#library(here)
+
+# Set the working directory to the script's directory
+#setwd(here::here())
 summary <- function(input_path, output_path) {
 	data <- read.csv(input_path)
 	#Extract file name (without extension)by Google gemini
@@ -13,4 +23,4 @@ summary <- function(input_path, output_path) {
 	write.csv(out,output_path,row.names=FALSE,quote=FALSE)
 }
 
-# summary("./example/input3.csv", "./example/output3_test.csv")
+ #summary("./example/input3.csv", "./example/output3_test.csv")
